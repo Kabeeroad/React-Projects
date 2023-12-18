@@ -1,14 +1,11 @@
-import React from 'react'
-import Header from '@/Components/Header' 
-
+import React from "react";
 
 const page = () => {
   return (
-   <div>
-    <Header />
-    <h1>This is home page han bilkul</h1>
-   </div>
-  )
-}
+    <div>
+      <h1>This is home page han bilkul</h1>
+    </div>
+  );
+};
 
-export default page
+export default page;
