@@ -4,7 +4,7 @@ const page = (props) => {
   return (
     <div>
       About
-      <h2>Hello{props.name}</h2>
+      <h2>Hello {props.user} </h2>
     </div>
   );
 };
