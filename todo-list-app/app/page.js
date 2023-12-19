@@ -20,6 +20,7 @@ const page = () => {
         <button className="bg-blue-600 text-white p-3 rounded font-bold">
           AddTask
         </button>
+        <h1>hello</h1>
       </form>
     </>
   );
