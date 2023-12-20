@@ -8,20 +8,32 @@ const page = () => {
   const submithandelar = (e) => {
     e.preventDefault(); //for stoping data
     setmaintask([...maintask, { title, dese }]);
-
     settitle("");
     setdese("");
+  };
+  const deletHandler = (i) => {
+    let copytask = [...maintask];
+    copytask.splice(i, 1);
+    setmaintask(copytask);
   };
   let randertask = <h2>No Available Taske</h2>;
   if (maintask.length > 0) {
     randertask = maintask.map((t, i) => {
       //t= maines partictular taske the t  and i= inddex of element
       return (
-        <li>
-          <div className="flex mb-3 justify-between">
+        <li key={i} className="flex items-center  justify-between mb-5">
+          <div className=" w-2/3">
             <h4 className="text-2xl font-mono font-bold">{t.title}</h4>
-            <h5 className="text-xl font-thin"> {t.dese} </h5>
+            <p className="text-xl font-thin"> {t.dese} </p>
           </div>
+          <button
+            onClick={() => {
+              deletHandler(i);
+            }}
+            className="bg-red-400 text-white rounded font-bold px-4 py-2 "
+          >
+            Delet
+          </button>
         </li>
       );
     });
