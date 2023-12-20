@@ -13,6 +13,19 @@ const page = () => {
     setdese("");
   };
   let randertask = <h2>No Available Taske</h2>;
+  if (maintask.length > 0) {
+    randertask = maintask.map((t, i) => {
+      //t= maines partictular taske the t  and i= inddex of element
+      return (
+        <li>
+          <div className="flex mb-3 justify-between">
+            <h4 className="text-2xl font-mono font-bold">{t.title}</h4>
+            <h5 className="text-xl font-thin"> {t.dese} </h5>
+          </div>
+        </li>
+      );
+    });
+  }
   return (
     <>
       <h1 className="bg-black text-white text-center font-serif p-5 font-bold text-3xl">
@@ -43,9 +56,7 @@ const page = () => {
           AddTask
         </button>
       </form>
-
       <hr />
-
       <div className="p-5 bg-slate-200 font-bold font-mono">
         <ul>{randertask}</ul>
       </div>
