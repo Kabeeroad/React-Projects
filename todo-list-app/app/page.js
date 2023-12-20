@@ -1,27 +1,54 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const page = () => {
+  const [title, settitle] = useState("");
+  const [dese, setdese] = useState("");
+  const [maintask, setmaintask] = useState([]); //for every taske
+  const submithandelar = (e) => {
+    e.preventDefault(); //for stoping data
+    setmaintask([...maintask, { title, dese }]);
+
+    settitle("");
+    setdese("");
+  };
+  let randertask = <h2>No Available Taske</h2>;
   return (
     <>
       <h1 className="bg-black text-white text-center font-serif p-5 font-bold text-3xl">
         React-ToDo-App
       </h1>
-      <form>
+      <form onSubmit={submithandelar}>
         <input
           type="text"
           className="border-4 border-zinc-800 n-8 m-5  px-4 py-2 text-2xl"
           placeholder="Enter Your Task"
+          value={title}
+          onChange={(e) => {
+            settitle(e.target.value);
+            // console.log(e.target.value);
+          }}
         />
         <input
           type="text"
           className="border-4 border-zinc-800 n-8 m-5 px-4 py-2 text-2xl"
-          placeholder="Enter Your Task"
+          placeholder="Enter Your Description"
+          value={dese}
+          onChange={(e) => {
+            setdese(e.target.value);
+            // console.log(x.target.value);
+          }}
         />
         <button className="bg-blue-600 text-white p-3 rounded font-bold">
           AddTask
         </button>
-        <h1>hello</h1>
       </form>
+
+      <hr />
+
+      <div className="p-5 bg-slate-200 font-bold font-mono">
+        <ul>{randertask}</ul>
+      </div>
     </>
   );
 };
