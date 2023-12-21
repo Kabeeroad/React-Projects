@@ -32,7 +32,7 @@ const page = () => {
             }}
             className="bg-red-400 text-white rounded font-bold px-4 py-2 "
           >
-            Delet
+            Dele
           </button>
         </li>
       );
