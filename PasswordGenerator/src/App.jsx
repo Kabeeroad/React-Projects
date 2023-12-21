@@ -74,7 +74,7 @@ function App() {
               setNumberAllowed((prev) => !prev);
             }}
           />
-          <label htmlFor="numberInput">Number</label>
+          <label htmlFor="numberInput">Numbers</label>
         </div>
         <div className="flex items-center gap-x-1">
           <input
