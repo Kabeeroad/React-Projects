@@ -6,7 +6,27 @@ const Foreground = () => {
     {
       Dsec: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quis!",
       filesize: ".9mb",
-      icone: true,
+      close: true,
+      tag: {
+        isOpen: false,
+        tagtitle: "Download Now",
+        tagColor: "blue",
+      },
+    },
+    {
+      Dsec: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quis!",
+      filesize: ".9mb",
+      close: true,
+      tag: {
+        isOpen: true,
+        tagTitle: "Download Now",
+        tagColor: "blue",
+      },
+    },
+    {
+      Dsec: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quis!",
+      filesize: ".9mb",
+      close: true,
       tag: {
         isOpen: true,
         tagTitle: "Download Now",
@@ -14,9 +34,12 @@ const Foreground = () => {
       },
     },
   ];
+
   return (
-    <div className="z-[3] fixed top-0 left-0  w-full h-full flex gap-8">
-      <Cards />
+    <div className="z-[3] fixed top-0 left-0  w-full h-full flex gap-8 flex-wrap ">
+      {data.map((item, index) => (
+        <Cards data={item} />
+      ))}
     </div>
   );
 };
