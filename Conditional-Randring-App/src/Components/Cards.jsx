@@ -11,13 +11,17 @@ const Cards = ({ data }) => {
       <div className="footer absolute  bottom-0 w-full  left-0 ">
         <div className="flex justify-between items-center py-3 px-8 mb-3">
           <h5>{data.filesize}</h5>
-          <h4 className="bg-white rounded-full w-7 h-7 flex items-center justify-center text-zinc-600">
-            {data.tag.isOpen ? <IoMdClose /> : <MdOutlineFileDownload />}
+          <h4 className=" bg-zinc-600 rounded-full flex items-center justify-cente text-white">
+            {data.close ? <IoMdClose /> : <MdOutlineFileDownload />}
           </h4>
         </div>
         {data.tag.isOpen && (
-          <div className="tag w-full py-4 bg-green-600 flex items-center justify-center">
-            <h5 className="text-sm font-semibold">Download Now</h5>
+          <div
+            className={`tag w-full py-4 ${
+              data.tag.tagColor === "blue" ? "bg-green-600" : "bg-blue-600"
+            } flex items-center justify-center`}
+          >
+            <h5 className="text-sm font-semibold">{data.tag.tagTitle}</h5>
           </div>
         )}
       </div>
