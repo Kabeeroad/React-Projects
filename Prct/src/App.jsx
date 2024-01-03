@@ -17,11 +17,11 @@ function App() {
       </header>
       <h1>Hello Wellcom react-router-dom 🚀🚀🚀</h1>
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contect />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
