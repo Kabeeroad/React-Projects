@@ -3,23 +3,25 @@ import "./Board.css";
 const Board = () => {
   return (
     <>
-      <h1 className=" text-center">Hey👋</h1>
-      <tabl>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
+      <h1>Hey👋</h1>
+      <tabl className="table">
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>9</td>
+          </tr>
+        </tbody>
       </tabl>
     </>
   );
