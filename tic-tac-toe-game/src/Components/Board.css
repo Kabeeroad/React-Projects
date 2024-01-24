@@ -5,6 +5,11 @@ h1 {
 td {
   width: 150px;
   height: 150px;
-  border: 2px solid black;
+  font-size: 20px;
+  color: lightcoral;
+
+  border: 2px solid lightblue;
+  border-radius: 5px;
+
   text-align: center;
 }
