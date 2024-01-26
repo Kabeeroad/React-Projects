@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Board.css";
 const Board = () => {
+  const Board = (useState[(Board, setBoard)] = [""]);
+
   return (
     <>
-      <h1>Hey👋</h1>
-      <tabl className="table">
+      <h1>Hello</h1>
+      <table>
         <tbody>
           <tr>
             <td>1</td>
@@ -22,7 +24,7 @@ const Board = () => {
             <td>9</td>
           </tr>
         </tbody>
-      </tabl>
+      </table>
     </>
   );
 };

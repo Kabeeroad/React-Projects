@@ -1,7 +1,13 @@
 h1 {
-  text-align: center;
-}
+  margin: 50px;
+  justify-content: center;
 
+  display: flex;
+}
+table {
+  display: flex;
+  justify-content: center;
+}
 td {
   width: 150px;
   height: 150px;
@@ -12,4 +18,5 @@ td {
   border-radius: 5px;
 
   text-align: center;
+  margin-top: 50px;
 }
