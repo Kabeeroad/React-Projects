@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Board.css";
 const Board = () => {
-  const [board, setBoard] = useState;
+  const [board, setBoard] = useState(Array(9).fill(""));
 
   return (
     <>
