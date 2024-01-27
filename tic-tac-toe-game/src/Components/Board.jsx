@@ -5,6 +5,10 @@ const Board = () => {
   const [currentplayer, setCurrentPlayer] = useState("x");
   const click = (n) => {
     let sequare = [...board];
+    if (board[n] !== "") {
+      alert("already Clicked");
+      return;
+    }
     sequare[n] = currentplayer;
     setBoard(sequare);
     if (currentplayer === "x") {
@@ -12,14 +16,41 @@ const Board = () => {
     } else {
       setCurrentPlayer("x");
     }
-    console.log("clicked", n);
+
+    if (checkWinner(sequare)) {
+      alert("Winner");
+      sequare.fill("");
+      setBoard(sequare);
+    }
   };
+  const checkDraw()
   function checkWinner(board) {
-    const winingConditions = [
-      [0, 1, 2][(3, 4, 5)][(6, 7, 8)][(0, 3, 6)][(1, 4, 7)][(2, 5, 8)][
-        (0, 4, 8)
-      ][(2, 4, 6)],
+    const winningConditions = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
     ];
+    let flag = false;
+    winningConditions.forEach((element) => {
+      if (
+        board[element[0]] !== "" &&
+        board[element[1]] !== "" &&
+        board[element[2]] !== ""
+      ) {
+        if (
+          board[element[0]] === board[element[1]] &&
+          board[element[1]] === board[element[2]]
+        ) {
+          flag = true;
+        }
+      }
+    });
+    return flag;
   }
   return (
     <>
