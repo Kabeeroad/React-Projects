@@ -22,8 +22,25 @@ const Board = () => {
       sequare.fill("");
       setBoard(sequare);
     }
+    if (checkDraw(sequare)) {
+      alert("Match Draw");
+      sequare.fill("");
+      setBoard(sequare);
+    }
   };
-  const checkDraw()
+  const checkDraw = (board) => {
+    let count = 0;
+    board.forEach((element) => {
+      if (element !== "") {
+        count++;
+      }
+    });
+    if (count > 9) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   function checkWinner(board) {
     const winningConditions = [
       [0, 1, 2],
