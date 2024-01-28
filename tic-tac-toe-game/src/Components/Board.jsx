@@ -35,7 +35,7 @@ const Board = () => {
         count++;
       }
     });
-    if (count > 9) {
+    if (count >= 9) {
       return true;
     } else {
       return false;
