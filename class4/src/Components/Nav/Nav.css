@@ -1,0 +1,8 @@
+nav ul {
+  display: flex;
+  background-color: rgb(129, 126, 126);
+}
+li {
+  list-style: none;
+  padding: 30px;
+}
