@@ -1,0 +1,5 @@
+1. installing node
+2. createing viteApp
+3. file or folader structure
+4. Components , jsx , realdom and virtual dom , events,
+5. hooks
