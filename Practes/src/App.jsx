@@ -4,6 +4,7 @@ import Footer from "./Footer/Footer";
 // import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Userinfo from "./Components/Userinfo";
+import UseEffct from "./Components/UseEffct";
 
 const App = (props) => {
   return (
@@ -11,7 +12,9 @@ const App = (props) => {
       <Nav />
       <Outlet />
       {/* // outlet mutlab page se jo contan load hokar arha he wo kahhhan shoow hoga */}
-      <Userinfo />
+      {/* <Userinfo /> */}
+
+      <UseEffct />
 
       <Footer />
     </div>
