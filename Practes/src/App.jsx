@@ -5,16 +5,19 @@ import Footer from "./Footer/Footer";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Userinfo from "./Components/Userinfo";
 import UseEffct from "./Components/UseEffct";
+import DigitalClock from "./Components/DigitalClock";
 
 const App = (props) => {
   return (
     <div>
       <Nav />
       <Outlet />
+      <hr />
       {/* // outlet mutlab page se jo contan load hokar arha he wo kahhhan shoow hoga */}
       {/* <Userinfo /> */}
 
-      <UseEffct />
+      {/* <UseEffct /> */}
+      <DigitalClock />
 
       <Footer />
     </div>
