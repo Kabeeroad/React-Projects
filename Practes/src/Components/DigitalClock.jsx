@@ -7,7 +7,7 @@ const DigitalClock = () => {
     const newtime = setInterval(() => {
       SetTime(new Date());
     }, 1000);
-    return () => clearInterval(newtime); //clean function
+    // return () => clearInterval(newtime); //clean function
   }, []);
   function formatime() {
     const hours = time.getHours();

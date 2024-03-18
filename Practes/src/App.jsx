@@ -6,6 +6,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Userinfo from "./Components/Userinfo";
 import UseEffct from "./Components/UseEffct";
 import DigitalClock from "./Components/DigitalClock";
+import ComponentA from "./Components/ComponentA";
 
 const App = (props) => {
   return (
@@ -17,7 +18,8 @@ const App = (props) => {
       {/* <Userinfo /> */}
 
       {/* <UseEffct /> */}
-      <DigitalClock />
+      {/* <DigitalClock /> */}
+      <ComponentA />
 
       <Footer />
     </div>
