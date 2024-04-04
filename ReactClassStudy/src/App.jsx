@@ -4,9 +4,9 @@ import UseEffect from "./Components/UseEffect";
 
 const App = () => {
   return (
-    <>
+    <div>
       <ComponentA />
-    </>
+    </div>
   );
 };
 export default App;

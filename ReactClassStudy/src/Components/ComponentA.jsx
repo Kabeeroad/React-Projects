@@ -1,21 +1,12 @@
-import React, { createContext, useState } from "react";
-
+import React, { useState } from "react";
+import "./ComponentB";
 import ComponentB from "./ComponentB";
-
-export const UseContext = createContext();
-
+import "./main.css";
+import ComponentD from "./ComponentD";
 const ComponentA = () => {
-  const [user, setuser] = useState("Devs");
+  // const [user, setuser] = useState("developer");
 
-  return (
-    <div>
-      ComponentA
-      <h1>hello {user}</h1>
-      <UseContext.Provider value={user}>
-        <ComponentB user={user} />
-      </UseContext.Provider>
-    </div>
-  );
+  return <div className="A">ComponentA</div>;
 };
 
 export default ComponentA;

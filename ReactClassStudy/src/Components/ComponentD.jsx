@@ -1,13 +1,10 @@
-import React, { useContext } from "react";
-import { UseContext } from "./ComponentA";
+import ComponentC from "./ComponentC";
 
 const ComponentD = () => {
-  const user = useContext(UseContext);
   return (
-    <div>
-      <h1>ComponetD</h1>
-
-      <h2>by{user}</h2>
+    <div className="A">
+      ComponentD
+      <ComponentC />
     </div>
   );
 };

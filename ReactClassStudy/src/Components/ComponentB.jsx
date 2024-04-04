@@ -1,11 +1,12 @@
 import React from "react";
 import ComponentC from "./ComponentC";
+import ComponentA from "./ComponentA";
 
 const ComponentB = () => {
   return (
-    <div>
+    <div className="A">
       ComponentB
-      <ComponentC />
+      <ComponentA />
     </div>
   );
 };
