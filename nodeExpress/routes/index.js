@@ -9,18 +9,4 @@ router.get("/", function (req, res) {
   res.render("index");
 });
 
-router.get("/ban", function (req, res) {
-  if (req.session.ban === true) {
-    res.send("your bande");
-  } else {
-    res.send("not band");
-  }
-});
-
-router.get("/remove", function (req, res) {
-  req.session.destroy(function (err) {
-    if (err) throw err;
-    res.send("ban removed");
-  });
-});
 module.exports = router;
