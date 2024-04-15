@@ -7,7 +7,7 @@ var session = require("express-session");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-
+var passport = require("passport");
 var app = express();
 
 // view engine setup
@@ -20,6 +20,11 @@ app.use(
     secret: "holeholedilemerabole",
   })
 );
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser(usersRouter.serializeUser());
+passport.deserializeUser(usersRouter.deserializeUser());
 
 app.use(logger("dev"));
 app.use(express.json());

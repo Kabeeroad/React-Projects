@@ -12,14 +12,12 @@ import UseMemo from "./Components/UseMemo";
 const App = (props) => {
   return (
     <div>
-      {/* <Nav /> */}
-      {/* <Outlet /> */}
+      <Nav />
+      <Outlet />
 
-      {/* // outlet mutlab page se jo contan load hokar arha he wo kahhhan shoow hoga */}
 
-      <UseMemo />
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
