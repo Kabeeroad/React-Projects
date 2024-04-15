@@ -7,7 +7,7 @@ const Dropdown = ({ title, children }) => {
         setIsOpen(!isOpen);
     };
     return (
-        <div className="inline-block relative">
+        <div className="  inline-block relative">
             <span className="text-gray-700 hover:underline cursor-pointer" onClick={handleClick}>
                 {title}
             </span>

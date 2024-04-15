@@ -3,7 +3,7 @@ import DropdownItem from "./DropdownItem"
 
 const CategoryMenu = () => {
     return (
-        <div className="bg-white py-4 flex flex-wrap justify-center">
+        <div className=" bg-yellow-500 gap-5  py-4 flex flex-wrap justify-center">
             <Dropdown title="Electronics">
                 <DropdownItem text="Charger" />
                 <DropdownItem text="Laptops" />
@@ -16,14 +16,14 @@ const CategoryMenu = () => {
                 <DropdownItem text="Speakers" />
                 <DropdownItem text="TV" />
             </Dropdown>
-            {/* Add dropdowns for other categories */}
+
             <Dropdown title="Men">
                 <DropdownItem text="Shoes" />
                 <DropdownItem text="T-shirt" />
                 <DropdownItem text="Blazers" />
                 <DropdownItem text="Formal Pants" />
             </Dropdown>
-            {/* ... */}
+
         </div>
     )
 }
